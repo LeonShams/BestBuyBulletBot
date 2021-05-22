@@ -1,5 +1,7 @@
 # Best Buy Bullet Bot (3B Bot)
 
+### :warning: Warning: Currently in beta! Not equipped to handle new Best Buy checkout process for Nvidia cards
+
 3B Bot is a stock checking bot with auto-checkout created to instantly purchase out-of-stock items on Best Buy once restocked. It was designed for speed with ultra-fast auto-checkout, as well as the ability to check for item restock up to a hundred times a second by utilizing all cores of your CPU (multiprocessing).
 
 * Headless item stock tracking (updates up to 100x a second)

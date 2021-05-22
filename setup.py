@@ -20,7 +20,6 @@ setup(
     url="https://github.com/LeonShams/BestBuyBulletBot",
     project_urls={
         "Documentation": "https://github.com/LeonShams/BestBuyBulletBot/wiki",
-        "Source Code": "https://github.com/LeonShams/BestBuyBulletBot",
         "Bug Tracker": "https://github.com/LeonShams/BestBuyBulletBot/issues",
     },
     packages=find_packages(),
