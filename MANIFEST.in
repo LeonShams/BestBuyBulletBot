@@ -1,0 +1,4 @@
+recursive-include best_buy_bullet_bot *.json
+recursive-include best_buy_bullet_bot *.wav
+include README.md
+include requirements.txt
