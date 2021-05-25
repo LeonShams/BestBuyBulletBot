@@ -129,9 +129,7 @@ def purchase(url, login_cookies, cvv, money_manager):
         ).text
     )
     if money_manager.check_funds(grand_total):
-        driver.find_element_by_xpath(
-            '//*[@id="checkoutApp"]/div[2]/div[1]/div[1]/main/div[2]/div[2]/div/div[5]/div[3]/div/button'
-        ).click()
+        driver.find_element_by_xpath(".btn.btn-lg.btn-block.btn-primary").click()
         money_manager.make_purchase(grand_total)
         bcolors.print(
             f"Successfully purchased {url}. The item was a grand total of ${grand_total:,.2f} leaving you with ${money_manager.get_funds():,.2f} of available funds.",
