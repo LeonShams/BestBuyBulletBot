@@ -87,7 +87,7 @@ def login(email, password, urls):
                 EC.visibility_of_element_located(
                     (
                         By.CSS_SELECTOR,
-                        ".price-box > div > div > .priceView-hero-price.priceView-customer-price",
+                        ".pricing-price > div > div > div > .priceView-hero-price.priceView-customer-price",
                     )
                 )
             )
