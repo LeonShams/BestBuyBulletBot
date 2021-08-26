@@ -16,7 +16,7 @@ setup(
     version=__version__,
     author="Leon Shams-Schaal",
     description="Quickly purchase items from Best Buy the moment they restock.",
-    long_description=Path("README.md").read_text(encoding="utf-8"),
+    long_description=Path("readme.md").read_text(encoding="utf-8"),
     long_description_content_type="text/markdown",
     url="https://github.com/LeonShams/BestBuyBulletBot",
     project_urls={
