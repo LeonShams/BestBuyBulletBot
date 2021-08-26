@@ -1,0 +1,18 @@
+[tool.black]
+target-version = ['py36', 'py37', 'py38', 'py39']
+exclude = '''
+(
+  /(
+      \.eggs
+    | \.git
+    | \.venv
+    | build
+    | dist
+    | 3b_bot.egg-info
+  )/
+)
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3

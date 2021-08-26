@@ -1,17 +1,26 @@
-# Description
+### Description
+<!-- Describe the changes. -->
 
-Brief description of the pull request:
+...
 
-A feature request has been created providing more information on the feature. The feature request issue number is #...
+### Motivation
+<!-- Why is the change needed? What problem does it solve? -->
 
-## Type of change
+...
+
+<!-- If needed provide code examples here. -->
+
+### Type of change
+<!-- Replace the space between the brackets with "x" for your selection. Like this [x] -->
 
 - [ ] Bug fix
 - [ ] New feature
-- [ ] General cleanup (e.g., typo correction, code reformatting)
+- [ ] General cleanup (e.g., typo correction, code cleanup)
+- [ ] Other
 
-## Checklist
+### Checklist
+<!-- Please go over the checklist and replace the space with "x" in the boxes that apply. -->
 
-- [ ] A feature request has been made that explains the feature in more detail
-- [ ] Code has been properly formatted using by running Black
-- [ ] Code has been vigorously tested
+<!-- Please install pre-commit by running `pip install pre-commit`. It will automatically format your code and should automatically run before committing, but can also be run manually with `pre-commit run -a`. -->
+- [ ] Code has been properly formatted by running pre-commit hooks
+- [ ] Code has undergone vigorously testing

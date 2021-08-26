@@ -1,0 +1,61 @@
+repos:
+-   repo: https://github.com/asottile/pyupgrade
+    rev: v2.19.4
+    hooks:
+    -   id: pyupgrade
+        args: [--py37-plus]
+
+-   repo: https://github.com/MarcoGorelli/absolufy-imports
+    rev: v0.3.0
+    hooks:
+    -   id: absolufy-imports
+        files: ^best_buy_bullet_bot/
+
+-   repo: https://github.com/PyCQA/isort
+    rev: 5.9.0
+    hooks:
+    -   id: isort
+
+-   repo: https://github.com/psf/black
+    rev: 21.6b0
+    hooks:
+    -   id: black
+
+-   repo: https://github.com/asottile/blacken-docs
+    rev: v1.9.1
+    hooks:
+    -    id: blacken-docs
+
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+    -   id: check-toml
+    -   id: debug-statements
+    -   id: requirements-txt-fixer
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+
+-   repo: local
+    hooks:
+    -   id: distribute-easter-egg
+        name: Add Easter Egg Comments
+        description: Adds the full easter egg message where if finds any comment that contains the text "EASTER EGG"
+        language: python
+        entry: python custom_hooks/easter_egg.py
+
+-   repo: https://github.com/asottile/yesqa
+    rev: v1.2.3
+    hooks:
+    -   id: yesqa
+
+-   repo: https://github.com/PyCQA/flake8
+    rev: 3.9.2
+    hooks:
+    -   id: flake8
+
+-   repo: https://github.com/codespell-project/codespell
+    rev: v2.1.0
+    hooks:
+    -   id: codespell
+        types_or: [python, rst, markdown]
+        files: ^(best_buy_bullet_bot|custom_hooks|docs)/

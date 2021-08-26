@@ -7,29 +7,35 @@ assignees: LeonShams
 
 ---
 
-**Expected behavior**
+### Expected behavior
+<!-- What should have happened? -->
 
-What should have happened?
+...
 
-**Actual behavior**
+### Actual behavior
+<!-- What actually happened? -->
 
-What actually happened?
+...
 
-**To Reproduce**
+### To Reproduce
+<!-- Steps to reproduce the behavior. -->
 
-Steps to reproduce the behavior:
 1. ...
+2. ...
+3. ...
 
-**Screenshots**
+### Screenshots
+<!-- If applicable, add screenshots to help explain your problem. -->
 
-If applicable, add screenshots to help explain your problem.
-
-**System information**
+### System information
 
 - OS Platform (e.g., macOS Mojave):
+
+<!-- Check with `3b-bot --version` -->
 - BestBuyBulletBot version:
+
+<!-- Check with `python3 --version` -->
 - Python version:
 
-**Additional context**
-
-Add any other context about the problem here.
+### Additional context
+<!-- Anything else? (optional) -->

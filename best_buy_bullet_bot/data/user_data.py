@@ -1,15 +1,26 @@
 import os
 import sys
 from getpass import getpass
-from threading import Timer
 
-from best_buy_bullet_bot.utils import bcolors, yes_or_no
 from keyring.errors import PasswordDeleteError
+from keyring.util import properties
 from keyrings.cryptfile.cryptfile import CryptFileKeyring
+from keyrings.cryptfile.file_base import FileBacked
+
+from best_buy_bullet_bot.data import SHARED_DIR
+from best_buy_bullet_bot.utils import Colors, yes_or_no
 
 EMAIL_VAR = "BB_EMAIL"
 PASS_VAR = "BB_PASS"
 CVV_VAR = "BB_CVV"
+
+
+@properties.NonDataProperty
+def file_path(self):
+    return os.path.join(SHARED_DIR, self.filename)
+
+
+FileBacked.file_path = file_path
 
 SERVICE_ID = "3B_BOT"
 KR = CryptFileKeyring()
@@ -62,7 +73,7 @@ def set_creds():
 
     print()
     while True:
-        password = getpass("Password: ")
+        password = getpass("Best Buy password: ")
         confirm_pass = getpass("Confirm password: ")
         if password == confirm_pass:
             break
@@ -71,28 +82,23 @@ def set_creds():
 
     print()
     KR.set_password(SERVICE_ID, CVV_VAR, _get_input("CVV: "))
-    bcolors.print("Sucessfully updated credentials!", properties=["success", "bold"])
+    Colors.print("Successfully updated credentials!", properties=["success"])
 
 
 def print_creds():
-    email, password, cvv = get_creds(bcolors.str("EMPTY", ["fail", "bold"]))
+    email, password, cvv = get_creds(Colors.str("EMPTY", ["fail"]))
     print("Email:", email)
     print("Password:", password)
     print("CVV:", cvv)
 
 
-def _delete_cred(name):
-    try:
-        KR.delete_password(SERVICE_ID, name)
-    except PasswordDeleteError:
-        pass
-
-
 def clear_creds():
-    _delete_cred(EMAIL_VAR)
-    _delete_cred(PASS_VAR)
-    _delete_cred(CVV_VAR)
-    bcolors.print("Credentials cleared!\n", properties=["success", "bold"])
+    for name in [EMAIL_VAR, PASS_VAR, CVV_VAR]:
+        try:
+            KR.delete_password(SERVICE_ID, name)
+        except PasswordDeleteError:
+            pass
+    Colors.print("Credentials cleared!\n", properties=["success", "bold"])
 
     # Check if user wants to reset their password
     if yes_or_no("Would you like to reset your password (y/n): "):

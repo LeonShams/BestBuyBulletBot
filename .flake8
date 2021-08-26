@@ -1,0 +1,13 @@
+[flake8]
+ignore =
+    # Defaults
+    E121,E123,E126,E226,E24,E704,W503,W504
+    # Space before ":"
+    E203
+    # Space after ","
+    E231
+    # Line too long
+    E501
+per-file-ignores =
+    # Ignore "undefined name '__version__'"
+    setup.py:F821
