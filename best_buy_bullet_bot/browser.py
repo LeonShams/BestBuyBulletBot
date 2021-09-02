@@ -348,12 +348,14 @@ def _purchase(
 
         # If we got redirected to the cart
         if branch.get_attribute("class") == "btn btn-lg btn-block btn-primary":
+            # Click "proceed to checkout" button
             branch.click()
             branch = wait.until(
                 EC.element_to_be_clickable(
                     (
                         By.CSS_SELECTOR,
                         "#credit-card-cvv, "  # Place order page
+                        "#cvv, "  # Review and place order page
                         ".button--continue > button.btn.btn-lg.btn-block.btn-secondary, "  # Continue to place order page (page before place order page)
                         "#fld-p1",  # Sign in (only requires password)
                     )
@@ -379,8 +381,8 @@ def _purchase(
         cvv_box = wait.until(
             EC.element_to_be_clickable(
                 (
-                    By.ID,
-                    "credit-card-cvv",
+                    By.CSS_SELECTOR,
+                    "#credit-card-cvv, #cvv",
                 )
             )
         )
