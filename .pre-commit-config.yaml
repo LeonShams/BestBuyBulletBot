@@ -1,6 +1,6 @@
 repos:
 -   repo: https://github.com/asottile/pyupgrade
-    rev: v2.19.4
+    rev: v2.25.0
     hooks:
     -   id: pyupgrade
         args: [--py37-plus]
@@ -12,17 +12,17 @@ repos:
         files: ^best_buy_bullet_bot/
 
 -   repo: https://github.com/PyCQA/isort
-    rev: 5.9.0
+    rev: 5.9.3
     hooks:
     -   id: isort
 
 -   repo: https://github.com/psf/black
-    rev: 21.6b0
+    rev: 21.8b0
     hooks:
     -   id: black
 
 -   repo: https://github.com/asottile/blacken-docs
-    rev: v1.9.1
+    rev: v1.11.0
     hooks:
     -    id: blacken-docs
 
