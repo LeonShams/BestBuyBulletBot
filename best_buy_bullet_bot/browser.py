@@ -253,7 +253,8 @@ def collect_item_cookies(driver, wait, urls):
                 EC.presence_of_element_located(
                     (
                         By.CSS_SELECTOR,
-                        ".pricing-price > div > div > div > .priceView-hero-price.priceView-customer-price",
+                        ".pricing-price > div > div > div > .priceView-hero-price.priceView-customer-price, "
+                        ".pricing-price > div > div > div > div > section > div > div > .priceView-hero-price.priceView-customer-price",
                     )
                 )
             )
