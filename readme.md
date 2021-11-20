@@ -19,13 +19,6 @@ Best Buy Bullet Bot, abbreviated to 3B Bot, is a stock checking bot with auto-ch
 Bear in mind that 3B Bot is currently not equipped to handle a queue and/or email verification during the checkout process. If either of these is present, the bot will wait for you to take over and will take control again once you are back on the traditional checkout track.
 
 ![3B Bot](https://raw.githubusercontent.com/LeonShams/BestBuyBulletBot/main/docs/source/assets/demo.svg)
-
-<p align="center">
-If you have success with the bot, donations are greatly appreciated.
-</p>
-
-[<p align="center"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" align="center" width="217px" alt="Buy me a coffee"></p>](https://www.buymeacoffee.com/leonshams)
-
 <br>
 
 ## Prerequisites
