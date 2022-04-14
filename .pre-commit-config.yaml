@@ -3,13 +3,13 @@ ci:
 
 repos:
 -   repo: https://github.com/asottile/pyupgrade
-    rev: v2.31.0
+    rev: v2.31.1
     hooks:
     -   id: pyupgrade
         args: [--py37-plus]
 
 -   repo: https://github.com/MarcoGorelli/absolufy-imports
-    rev: v0.3.0
+    rev: v0.3.1
     hooks:
     -   id: absolufy-imports
         files: ^best_buy_bullet_bot/
@@ -20,12 +20,12 @@ repos:
     -   id: isort
 
 -   repo: https://github.com/psf/black
-    rev: 21.12b0
+    rev: 22.3.0
     hooks:
     -   id: black
 
 -   repo: https://github.com/asottile/blacken-docs
-    rev: v1.12.0
+    rev: v1.12.1
     hooks:
     -    id: blacken-docs
 
