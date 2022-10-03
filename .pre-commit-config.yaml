@@ -3,7 +3,7 @@ ci:
 
 repos:
 -   repo: https://github.com/asottile/pyupgrade
-    rev: v2.34.0
+    rev: v2.38.2
     hooks:
     -   id: pyupgrade
         args: [--py37-plus]
@@ -20,7 +20,7 @@ repos:
     -   id: isort
 
 -   repo: https://github.com/psf/black
-    rev: 22.6.0
+    rev: 22.8.0
     hooks:
     -   id: black
 
@@ -47,17 +47,17 @@ repos:
         entry: python custom_hooks/easter_egg.py
 
 -   repo: https://github.com/asottile/yesqa
-    rev: v1.3.0
+    rev: v1.4.0
     hooks:
     -   id: yesqa
 
 -   repo: https://github.com/PyCQA/flake8
-    rev: 4.0.1
+    rev: 5.0.4
     hooks:
     -   id: flake8
 
 -   repo: https://github.com/codespell-project/codespell
-    rev: v2.1.0
+    rev: v2.2.1
     hooks:
     -   id: codespell
         types_or: [python, rst, markdown]
