@@ -453,7 +453,7 @@ def start(fast=False, headless=False, verify_account=False, skip_verification=Fa
     Run `3b-bot --fast` in your shell.
     """
 
-    # If we don't have admin privilidges try to elevate permissions
+    # If we don't have admin privileges try to elevate permissions
     if fast and hasattr(os, "getuid") and os.getuid() != 0:
         print("Elevating permissions to run in fast mode.")
         elevate(graphical=False)
