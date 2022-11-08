@@ -86,8 +86,11 @@ def yes_or_no(prompt):
         if response == "":
             continue
 
-        if response in "yes" or response in "no":
-            return response in "yes"
+        responded_yes = response == "yes"[:len(response)]
+        responded_no = response == "no"[:len(response)]
+        
+        if responded_yes != responded_no: # responeded_yes xor responded_no
+            return responded_yes
         else:
             Colors.print(
                 'Invalid response. Please enter either "y" or "n"', properties=["fail"]
