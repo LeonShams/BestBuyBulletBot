@@ -31,7 +31,7 @@ setup(
     zip_safe=False,
     license="MIT",
     classifiers=[
-        "Development Status :: 4 - Beta",
+        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: End Users/Desktop",
         "Operating System :: OS Independent",
         "License :: OSI Approved :: MIT License",
