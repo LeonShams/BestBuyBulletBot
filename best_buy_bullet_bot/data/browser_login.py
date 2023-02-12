@@ -37,10 +37,15 @@ def cookies_available():
             return True
 
         except JSONDecodeError:
-            delete_cookies()
+            _delete_cookies()
 
     return False
 
 
 def delete_cookies():
+    if cookies_available():
+        _delete_cookies()
+
+
+def _delete_cookies():
     os.remove(COOKIES_DIR)
