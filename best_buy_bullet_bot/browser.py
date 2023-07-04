@@ -415,7 +415,7 @@ def _purchase(
         return True
     else:
         Colors.print(
-            f"Insuffient funds to purchase {title} which costs a grand total of ${grand_total:,.2f} while you only have ${money_manager.get_funds():,.2f} of available funds.",
+            f"Insufficient funds to purchase {title} which costs a grand total of ${grand_total:,.2f} while you only have ${money_manager.get_funds():,.2f} of available funds.",
             properties=["fail"],
         )
     return False
