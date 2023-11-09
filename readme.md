@@ -1,4 +1,4 @@
-# Best Buy Bullet Bot (3B Bot)
+# Best Buy Bullet Bot (3B Bot) - DEPRICATED
 
 Best Buy Bullet Bot, abbreviated to 3B Bot, is a stock checking bot with auto-checkout created to instantly purchase out-of-stock items on Best Buy once restocked. It was designed for speed with ultra-fast auto-checkout, as well as the ability to utilize all cores of your CPU with multiprocessing for optimal performance.
 
