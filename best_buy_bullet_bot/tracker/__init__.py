@@ -178,9 +178,11 @@ def await_checkout(
                     sound_effects.stop()
 
                 Colors.print(
-                    f'All requested "{title}" were purchased.'
-                    if money_manager.check_funds(pred_price)
-                    else f"With only ${money_manager.get_funds():,.2f} you cannot afford {title}.",
+                    (
+                        f'All requested "{title}" were purchased.'
+                        if money_manager.check_funds(pred_price)
+                        else f"With only ${money_manager.get_funds():,.2f} you cannot afford {title}."
+                    ),
                     "It will no longer be tracked to conserve resources.\n",
                     properties=["warning"],
                 )
@@ -464,9 +466,11 @@ def start(fast=False, headless=False, verify_account=False, skip_verification=Fa
             close_data()
 
         # Forcefully close everything
-        os.system(
-            f"taskkill /F /im {psutil.Process(os.getpid()).name()}"
-        ) if WINDOWS else os.killpg(os.getpgid(os.getpid()), signal.SIGKILL)
+        (
+            os.system(f"taskkill /F /im {psutil.Process(os.getpid()).name()}")
+            if WINDOWS
+            else os.killpg(os.getpgid(os.getpid()), signal.SIGKILL)
+        )
 
     def clean_kill(*args, **kwargs):
         # Suppress error messages created as a result of termination
@@ -489,8 +493,7 @@ def start(fast=False, headless=False, verify_account=False, skip_verification=Fa
         signal.signal(sig, clean_kill)
     signal.signal(signal.SIGTERM, kill_all)
 
-    print(
-        """
+    print("""
  .d8888b.  888888b.        888888b.            888
 d88P  Y88b 888  "88b       888  "88b           888
      .d88P 888  .88P       888  .88P           888
@@ -500,8 +503,7 @@ d88P  Y88b 888  "88b       888  "88b           888
 Y88b  d88P 888   d88P      888   d88P Y88..88P Y88b.
  "Y8888P"  8888888P"       8888888P"   "Y88P"   "Y888
 
-"""
-    )
+""")
 
     # Check if a flag has been passed to suppress warnings
     suppress_warnings = warnings_suppressed()
